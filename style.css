@@ -1,0 +1,416 @@
+body {
+    background-color: #45BF55;
+    margin: 0;
+}
+
+#home {
+    background: linear-gradient(#45BF55, #97ED8A);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+
+#home .title {
+    font-size: 48px;
+    color: #E7E8E7;
+    font-weight: bold;
+    margin-top: 15%;
+    text-align: center;
+}
+
+#home .button {
+    background: #E7E8E7;
+    background: linear-gradient(#E7E8E7, #6f6);
+    border-radius: 2px;
+    box-shadow: 0 0 0 5px #E7E8E7;
+    display: table;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 20% auto;
+}
+
+#home .footer {
+    bottom: 20px;
+    position: absolute;
+    right: 50px;
+}
+
+.theResults {
+    display: none;
+}
+
+#result {
+    background: #3B3DFF;
+    background: linear-gradient(rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 0, 0.3) 80%);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#result[data="true"] {
+    background: #3B3DFF;
+    background: linear-gradient(rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 0, 0.3) 80%);
+}
+
+#result .title {
+    color: #45BF55;
+    font-size: 48px;
+    margin-top: 15%;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#result .body {
+    color: #45BF55;
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#result .button {
+    background:#E7E8E7;
+    background: linear-gradient(#E7E8E7, #6f6);
+    border-radius: 2px;
+    box-shadow: 0 0 0 5px #090;
+    display: table;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 40px auto;
+    margin-bottom: 0;
+}
+
+#letter {
+    font-size: 22px;
+    height: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+.alpha {
+    box-shadow: 0 3px 0 -1px #555;
+    display: inline-block;
+    margin: 1px;
+    height: 20px;
+    text-transform: uppercase;
+    width: 20px;
+}
+
+.ls {
+    box-shadow: 0 0 0 0 #555;
+    width: 10px;
+}
+
+#game {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 220px;
+}
+
+#game .player {
+    left: 53px;
+    position: absolute;
+    top: 90px;
+    height: 130px;
+    width: 75px;
+}
+
+.player .playerMode {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.playerMode .head {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #000 inset;
+    height: 35px;
+    margin: auto;
+    width: 35px;
+}
+
+.playerMode .head[data="false"] {
+    display: none;
+}
+
+.playerMode .body {
+    background-color: #000;
+    height: 45px;
+    margin: auto;
+    width: 2px;
+}
+
+.playerMode .body[data="false"] {
+    display: none;
+}
+
+.playerMode .body:before, .playerMode .body:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    width: 2px;
+}
+
+.playerMode .body[l="false"]:before, .playerMode .body[r="false"]:after {
+    display: none;
+}
+
+.playerMode .body:before {
+    left: 27px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.playerMode .body:after {
+    right: 26px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.playerMode .foot {
+    background-color: #000;
+    height: 3px;
+    margin: auto;
+    width: 2px;
+}
+
+.playerMode .foot[data="false"] {
+    display: none;
+}
+
+.playerMode .foot:before, .playerMode .foot:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    width: 2px;
+}
+
+.playerMode .foot[l="false"]:before, .playerMode .foot[r="false"]:after {
+    display: none;
+}
+
+.playerMode .foot:before {
+    left: 30px;
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+}
+
+.playerMode .foot:after {
+    right: 29px;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+
+#game .stage3 {
+    background-color: #000;
+    height: 20px;
+    left: 90px;
+    position: absolute;
+    top: 70px;
+    width: 2px;
+}
+
+#game .stage3[data="false"] {
+    display: none;
+}
+
+#game .stage2 {
+    background-color: #000;
+    border-radius: 5px 0 0 5px;
+    bottom: 180px;
+    height: 5px;
+    position: absolute;
+    right: 45px;
+    width: 95px;
+}
+
+#game .stage2:before {
+    background-color: #000;
+    content: "";
+    left: 50px;
+    height: 5px;
+    position: absolute;
+    top: 17px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 50px;
+}
+
+#game .stage2[data="false"] {
+    display: none;
+}
+
+#game .stage {
+    background-color: #000;
+    bottom: 0;
+    height: 180px;
+    margin: auto;
+    position: absolute;
+    right: 45px;
+    width: 5px;
+}
+
+#game .stage[data="false"] {
+    display: none;
+}
+
+#game .ground {
+    background-color: #000;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 220px;
+}
+
+#game .ground[data="false"] {
+    display: none;
+}
+
+#game .hintButton {
+    background: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    border-radius: 8%;
+    box-shadow: 1px 1px 3px #999;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#game .hintButton[data="false"] {
+    display: none;
+}
+
+#alphabet {
+    background-color: rgba(238, 238, 238, 0.9);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 500px;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+#moveCursor {
+    padding: 15px;
+}
+
+.movement {
+    border-bottom: solid 2px #ccc;
+}
+
+#hint {
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px #888;
+    display: none;
+    left: 0;
+    margin: auto;
+    margin-top: 75px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+}
+
+#hint .title {
+    background: #45BF55;
+    background: linear-gradient(#45BF55, #97ED8A);
+    border-bottom: solid 1px #555;
+    border-radius: 2px 2px 0 0;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+}
+
+#hint .title .exit {
+    background-color: #FF1D23;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #888;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+#hint .body {
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    padding: 10px;
+}
+
+.createspan {
+    background: #45BF55;
+    background: linear-gradient(#45BF55, #97ED8A);
+    box-shadow: 1px 1px 1px 0 #ccc;
+    display: inline-block;
+    margin: 2px;
+    padding: 8px;
+    text-align: center;
+    width: 25px;
+}
+
+.createspan[data="false"], .createspan[data="true"] {
+    color: #555;
+    font-weight: bold;
+}
+
+.createspan[data="true"] {
+    background: #9f9;
+}
+
+.createspan[data="false"] {
+    background: #aaa;
+}
+
+.anim {
+    animation: button 3s infinite;
+}
+
+@keyframes button {
+    0%, 50%, 90% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(5deg) scale(1);
+    }
+    70% {
+        transform: rotate(-5deg) scale(0.97);
+    }
+    80% {
+        transform: rotate(5deg) scale(1.05);
+    }
+}
+
+@-webkit-keyframes button {
+    0%, 50%, 90% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(5deg) scale(1);
+    }
+    70% {
+        transform: rotate(-5deg) scale(0.97);
+    }
+    80% {
+        transform: rotate(5deg) scale(1.05);
+    }
+}
