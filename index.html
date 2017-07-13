@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hang Man</title>
-    <link rel="resetsheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <h1>Hangman!</h1>
-    <h3>Major Cities of the USA</h3>
-    
-    <button id="A" type="button" onclick="aletter()">A</button>
-    <button id="B" type="button" onclick="bletter()">B</button>
-    <button id="C" type="button" onclick="cletter()">C</button>
-    <button id="D" type="button" onclick="dletter()">D</button>
-    <button id="E" type="button" onclick="eletter()">E</button>
-    <button id="F" type="button" onclick="fletter()">F</button>
-    <button id="G" type="button" onclick="gletter()">G</button>
-    <button id="H" type="button" onclick="hletter()">H</button>
-    <button id="I" type="button" onclick="iletter()">I</button>
-    <button id="J" type="button" onclick="jletter()">J</button>
-    <button id="K" type="button" onclick="kletter()">K</button>
-    <button id="L" type="button" onclick="lletter()">L</button>
-    <button id="M" type="button" onclick="mletter()">M</button>
-    <button id="N" type="button" onclick="nletter()">N</button>
-    <button id="O" type="button" onclick="oletter()">O</button>
-    <button id="P" type="button" onclick="pletter()">P</button>
-    <button id="Q" type="button" onclick="qletter()">Q</button>
-    <button id="R" type="button" onclick="rletter()">R</button>
-    <button id="S" type="button" onclick="sletter()">S</button>
-    <button id="T" type="button" onclick="tletter()">T</button>
-    <button id="U" type="button" onclick="uletter()">U</button>
-    <button id="V" type="button" onclick="vletter()">V</button>
-    <button id="W" type="button" onclick="wletter()">W</button>
-    <button id="X" type="button" onclick="xletter()">X</button>
-    <button id="Y" type="button" onclick="yletter()">Y</button>
-    <button id="Z" type="button" onclick="zletter()">Z</button>
-    
+    <head>
+      <meta charset="UTF-8">
+      <title>Hang Man</title>
+      <link rel="resetsheet" href="reset.css">
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="home">
+            <div class="title">Hangman</div>
+            <div class="button anim" onclick="startGame()">Play</div>
+        </div>
+        <div id="result" class="theResults">
+            <div class="title" id="titletile"></div>
+            <div class="body" id="bodytile"></div>
+            <div class="button anim" onclick="startGame()">Try Again?</div>
+        </div>
+        <div id="playNewGame">
+            <div id="letter"></div>
+            <div id="game">
+                <div class="player">
+                    <div class="playerMode">
+                        <div class="head" data="false" id="game4"></div>
+                        <div class="body" data="false" alpha="false" beta="false" id="game5"></div>
+                        <div class="foot" data="false" alpha="false" beta="false" id="game6"></div>
+                    </div>
+                </div>
+                <div class="stage3" data="false" id="game3"></div>
+                <div class="stage2" data="false" id="game2"></div>
+                <div class="stage" data="false" id="game1"></div>
+                <div class="ground" data="false" id="game0"></div>
+                <div class="hintButton" data="false" id="hintButton" onclick="hint()">?</div>
+            </div>
+            <div id="alphabet">
+                <div id="moveCursor"><div class="movement"></div></div>
+                <div id="board"></div>
+            </div>
+            <div class="hint" id="hint">
+                <div class="title">Hint<div class="exit" onclick="hintExit()">X</div></div>
+                <div class="body" id="hintText"></div>
+            </div>
+        </div>
+    </body>
     <footer>
       <a href="https://www.linkedin.com/in/emellopez/"><i class="fa fa-linkedin-square" 
       aria-hidden="true" style="font-size:48px;"></i></a>
 
       <a href="https://git.generalassemb.ly/emlop" class="fa fa-github" aria-hidden="true" 
       style="font-size:48px;"></i></a>
-      
     </footer>
     <script src="app.js"></script>
-
-  </body>
 </html>
-
